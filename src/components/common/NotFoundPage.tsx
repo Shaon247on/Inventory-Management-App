@@ -137,8 +137,8 @@ const NotFoundPage = () => {
           className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
-          The page you're looking for seems to have vanished into the digital void. 
-          Don't worry though, even the best explorers sometimes take a wrong turn.
+          The page you&apos;re looking for seems to have vanished into the digital void.
+          Don&apos;t worry though, even the best explorers sometimes take a wrong turn.
         </motion.p>
 
         {/* Buttons */}

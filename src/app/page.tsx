@@ -325,7 +325,7 @@ const Page = () => {
                 )}
               </div>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 italic leading-relaxed">
-                &quot;"{testimonials[activeTestimonial].content}&quot;
+                &quot;{testimonials[activeTestimonial].content}&quot;
               </p>
               <div className="flex items-center justify-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold">
