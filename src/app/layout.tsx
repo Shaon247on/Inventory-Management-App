@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair, Open_Sans, Inter } from "next/font/google";
+import { ReactLenis } from "lenis/react";
+
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const playfair = Playfair({
@@ -32,7 +35,15 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${openSans.variable} ${inter.variable} antialiased`}
       >
-        {children}
+        <ReactLenis
+          root
+          options={{
+            lerp: 0.1,
+            duration: 1.4,
+          }}
+        >
+          {children}
+        </ReactLenis>
       </body>
     </html>
   );
