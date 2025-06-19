@@ -5,6 +5,7 @@ import {
   useScroll,
   useTransform,
   AnimatePresence,
+  MotionValue
 } from "framer-motion";
 import {
   Package,
@@ -26,12 +27,12 @@ import {
   popUpDownVariants,
 } from "@/components/animations/AnimatedCounter";
 
-const page = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+const Page = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [activeTestimonial, setActiveTestimonial] = useState<number>(0);
+  const { scrollYProgress }:{scrollYProgress: MotionValue<number>} = useScroll();
+  const y: MotionValue<string> = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity: MotionValue<number> = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -324,7 +325,7 @@ const page = () => {
                 )}
               </div>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 italic leading-relaxed">
-                "{testimonials[activeTestimonial].content}"
+                &quot;"{testimonials[activeTestimonial].content}&quot;
               </p>
               <div className="flex items-center justify-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold">
@@ -552,4 +553,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

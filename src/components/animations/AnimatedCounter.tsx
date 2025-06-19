@@ -1,4 +1,4 @@
-import { Variants, TargetAndTransition } from "framer-motion";
+import { Variants } from "framer-motion";
 
 // Spinner rotation animation
 export const spinnerVariants: Variants = {
