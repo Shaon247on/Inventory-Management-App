@@ -134,7 +134,7 @@ const Page = () => {
             animate="visible"
           >
             <motion.h1
-              className="font-playfair text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-[90px]"
+              className="font-playfair text-4xl md:text-6xl lg:text-8xl font-bold leading-[40px] mb-6 md:leading-[60px] lg:leading-[90px]"
               variants={itemVariants}
             >
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
